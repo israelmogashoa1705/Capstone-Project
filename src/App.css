@@ -1,154 +1,166 @@
-.App {
-  font-family: Arial, sans-serif;
-  text-align: center;
+/* ===== GLOBAL RESET ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
-
 body {
-  margin: 0;
-  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  background: #EDEFEE;
   color: #333;
+}
+
+/* ===== APP CONTAINER (PHONE LOOK) ===== */
+
+#root {
+  max-width: 430px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
 }
 
 /* ===== HEADINGS ===== */
 
 h1 {
   font-size: 2.5rem;
-  color: #495e57;
-  margin-bottom: 10px;
 }
 
 h2 {
   font-size: 2rem;
-  color: #333;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 p {
   font-size: 1rem;
-  line-height: 1.6;
-  max-width: 700px;
+  line-height: 1.4;
+  color: #666;
 }
 
-span {
-  color: #f4ce14;
-  font-weight: bold;
-}
-
-/* ===== HEADER ===== */
+/* ===== HERO / HEADER ===== */
 
 header {
-  background-color: #f4ce14;
+  background-color: #495E57;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   padding: 20px;
+  gap: 15px;
 }
 
-header img {
-  width: 80px;
-  border-radius: 10px;
+header h1 {
+  color: #F4CE14;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+header h2 {
+  font-size: 2rem;
+  color: #EDEFEE;
+  margin-bottom: 10px;
+}
+
+header p {
+  max-width: 220px;
+}
+
+header button {
+  background: #F4CE14;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* HERO IMAGE */
+
+.hero-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 /* ===== NAVIGATION ===== */
 
 nav {
-  width: 100%;
-  background-color: #495e57;
+  background: white;
+  padding: 12px 0;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 15px;
-  margin: 0;
+  gap: 20px;
+  list-style: none;
 }
 
 nav li {
-  transition: transform 0.2s ease;
-}
-
-nav li:hover {
-  transform: scale(1.05);
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
   font-weight: bold;
-  font-size: 1rem;
+  cursor: pointer;
 }
 
-nav a:hover {
-  color: #f4ce14;
-}
-
-/* ===== MAIN ===== */
+/* ===== MAIN SECTION ===== */
 
 main {
-  padding: 40px;
-  min-height: 300px;
-}
-
-/* ===== IMAGES ===== */
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-/* ===== CARDS / SECTIONS ===== */
-
-section,
-article,
-aside {
-  background-color: white;
-  margin: 20px;
+  background: #F8F8F8;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== CATEGORY BUTTONS ===== */
+
+.categories {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.categories button {
+  background: #EDEFEE;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* ===== MENU ITEMS ===== */
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 15px 0;
+  border-top: 1px solid #ddd;
+}
+
+.menu-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.menu-item strong {
+  font-size: 1.1rem;
+  display: block;
+  margin-top: 5px;
 }
 
 /* ===== FOOTER ===== */
 
 footer {
-  background-color: #333;
+  background: #495E57;
   color: white;
-  padding: 20px;
-}
-
-/* ===== FLEX ALIGNMENT ===== */
-
-header,
-nav,
-main,
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  main {
-    padding: 20px;
-  }
-
-  p {
-    padding: 0 10px;
-  }
+  text-align: center;
+  padding: 15px;
 }
