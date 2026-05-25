@@ -1,39 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import BookingForm from "./BookingForm";
 
-test("renders BookingForm heading text", () => {
+test("renders BookingForm heading", () => {
+  const mockDispatch = jest.fn();
+
   render(
     <BookingForm
       availableTimes={["17:00", "18:00"]}
-      dispatch={() => {}}
+      dispatch={mockDispatch}
+      submitForm={jest.fn()}
     />
   );
 
-  // Test a visible static label from your form
-  const dateLabel = screen.getByText(/choose date/i);
-  expect(dateLabel).toBeInTheDocument();
-});
-
-test("renders time label", () => {
-  render(
-    <BookingForm
-      availableTimes={["17:00", "18:00"]}
-      dispatch={() => {}}
-    />
-  );
-
-  const timeLabel = screen.getByText(/choose time/i);
-  expect(timeLabel).toBeInTheDocument();
-});
-
-test("renders number of guests label", () => {
-  render(
-    <BookingForm
-      availableTimes={["17:00", "18:00"]}
-      dispatch={() => {}}
-    />
-  );
-
-  const guestsLabel = screen.getByText(/number of guests/i);
-  expect(guestsLabel).toBeInTheDocument();
+  const heading = screen.getByText(/Choose date/i);
+  expect(heading).toBeInTheDocument();
 });

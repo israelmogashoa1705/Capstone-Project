@@ -1,10 +1,16 @@
 import Main from "./Main";
 
 function BookingPage() {
+
+  // temporary submit function (prevents crash)
+  const submitForm = (formData) => {
+    console.log("Form submitted:", formData);
+    return true;
+  };
+
   return (
     <div>
-      <h1>Book a Table</h1>
-      <Main />
+      <Main submitForm={submitForm} />
     </div>
   );
 }
